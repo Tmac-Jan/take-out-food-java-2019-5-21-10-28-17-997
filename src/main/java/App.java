@@ -1,5 +1,3 @@
-import com.sun.deploy.util.StringUtils;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,7 +92,8 @@ public class App {
         }else{
             double save = total1+6-total2;
             output+="使用优惠:\n";
-            String names = StringUtils.join(spNameList,"，");
+//            String names = StringUtils.join(spNameList,"，");
+            String names = String.join("，",spNameList);
             output+="指定菜品半价("+names+")，省"+df.format(save)+"元\n";
             output += "-----------------------------------\n";
             output += ("总计："+ df.format(total2) + "元\n" );
